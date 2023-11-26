@@ -3,12 +3,12 @@ import React from 'react';
 import {globalStyles} from '../styles/Global';
 const ReviewDetails = ({navigation}: {navigation: any}) => {
   const pressHandler = () => {
-    navigation.push('Home');
+    navigation.goBack();
   };
   return (
     <View style={globalStyles.container}>
       <Text>Review details</Text>
-      <Button title="go to home page" onPress={pressHandler} />
+      <Button title="go back to About page" onPress={pressHandler} />
     </View>
   );
 };
