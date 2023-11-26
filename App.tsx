@@ -1,19 +1,21 @@
 import React, {useState} from 'react';
-
 import {StatusBar, StyleSheet, Text, View} from 'react-native';
 import Home from './screens/Home';
 import About from './screens/About';
 import ReviewDetails from './screens/ReviewDetails';
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
 function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="white" />
-      <Home />
-      <About />
-      <ReviewDetails />
-      <Text style={styles.text}>saba</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
