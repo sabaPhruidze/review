@@ -4,7 +4,7 @@ import {globalStyles} from '../styles/Global';
 
 const Home = ({navigation}: {navigation: any}) => {
   const pressHandler = () => {
-    navigation.navigate('About');
+    navigation.push('About');
   };
   return (
     <View style={globalStyles.container}>
