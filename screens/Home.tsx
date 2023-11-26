@@ -9,7 +9,7 @@ const Home = ({navigation}: {navigation: any}) => {
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.titleText}>Home</Text>
-      <Button title="go to review" onPress={pressHandler} />
+      <Button title="go to About page" onPress={pressHandler} />
     </View>
   );
 };
