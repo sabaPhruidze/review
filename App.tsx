@@ -17,6 +17,8 @@ function App() {
           headerStyle: {
             backgroundColor: '#eee',
           },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
         }}>
         <Stack.Screen
           name="Home"
@@ -40,19 +42,5 @@ function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'black',
-    textAlign: 'center',
-    fontFamily: 'NunitoBold',
-  },
-});
 
 export default App;
