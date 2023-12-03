@@ -13,9 +13,17 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{title: 'gameZone', headerStyle: {backgroundColor: '#eee'}}}
+        />
         <Stack.Screen name="About" component={About} />
-        <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+        <Stack.Screen
+          name="ReviewDetails"
+          component={ReviewDetails}
+          options={{title: 'Review Details'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
