@@ -1,4 +1,4 @@
-import {View, Text, Button} from 'react-native';
+import {View, Text, FlatList, Touchable, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {globalStyles} from '../styles/Global';
 
@@ -29,13 +29,18 @@ const Home = ({navigation}: {navigation: any}) => {
       key: 3,
     },
   ]);
-  const pressHandler = () => {
-    navigation.push('About');
-  };
+
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Home</Text>
-      <Button title="go to About page" onPress={pressHandler} />
+      <FlatList
+        data={reviews}
+        renderItem={({item}) => (
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ReviewDetails', item)}>
+            <Text style={globalStyles.titleText}>{item.title}</Text>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 };
