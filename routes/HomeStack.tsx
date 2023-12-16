@@ -1,13 +1,11 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import ReviewDetails from '../screens/ReviewDetails';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
 const Stack = createNativeStackNavigator();
-
-function HomeStack() {
+const HomeStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -28,6 +26,7 @@ function HomeStack() {
             },
           }}
         />
+
         <Stack.Screen
           name="ReviewDetails"
           component={ReviewDetails}
@@ -38,6 +37,6 @@ function HomeStack() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 export default HomeStack;
